@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --background: 248 250 252;
+    /* Slate 50 */
+    --foreground: 15 23 42;
+    /* Slate 900 */
+    --primary: 59 130 246;
+    /* Blue 500 */
+    --primary-foreground: 255 255 255;
+    --card: 255 255 255;
+    --card-foreground: 15 23 42;
+    --border: 226 232 240;
+    /* Slate 200 */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: 15 23 42;
+        /* Slate 900 */
+        --foreground: 248 250 252;
+        /* Slate 50 */
+        --primary: 59 130 246;
+        --primary-foreground: 255 255 255;
+        --card: 30 41 59;
+        /* Slate 800 */
+        --card-foreground: 248 250 252;
+        --border: 51 65 85;
+        /* Slate 700 */
+    }
+}
+
+body {
+    color: rgb(var(--foreground));
+    background: rgb(var(--background));
+    font-family: var(--font-inter), sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
