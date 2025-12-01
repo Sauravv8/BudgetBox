@@ -150,8 +150,10 @@ export const useBudgetStore = create<BudgetState>()(
                 const { budget } = get();
                 if (!budget) return;
 
+                const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+
                 try {
-                    const response = await fetch('http://localhost:3001/budget/sync', {
+                    const response = await fetch(`${API_URL}/budget/sync`, {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(budget),
